@@ -23,14 +23,13 @@ public class WikiCodePuller{
 		//System.out.println(line);
 
 		
-		Pattern p = Pattern.compile("<pre>(.+?)</pre>");
+		Pattern p = Pattern.compile("<tag>(.+?)</tag>");
 		Matcher m = p.matcher(line);
 		List<String> xss = new ArrayList<String>();
 
 		while(m.find()){
-			xss.add(m.group());
-			System.out.println(m.group());
+		  xss.add(m.group());
+		  System.out.println()
 		}
-		
 	}
 }

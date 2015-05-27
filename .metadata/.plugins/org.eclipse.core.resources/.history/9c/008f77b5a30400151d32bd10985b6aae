@@ -28,9 +28,9 @@ public class WikiCodePuller{
 		List<String> xss = new ArrayList<String>();
 
 		while(m.find()){
-			xss.add(m.group());
-			System.out.println(m.group());
+		  xss.add(m.group());
 		}
 		
+		System.out.println(m.group);
 	}
 }
