@@ -3,10 +3,11 @@ import java.util.Scanner;
 public class WikiCodePuller{
 
 	public static void main(String[] args){
+		String line = "";
 
 		try{
 			Scanner sc = new Scanner(System.in);
-			File file = new File("XSS Filter Evasion Cheat Sheet.html");
+			File file = new File("XSS Filter Evasion Cheat Sheet.txt");
 
 			in = new Scanner(file());
 		}
@@ -14,23 +15,18 @@ public class WikiCodePuller{
 		boolean isCode = false;
 
 		while(in.hasNextLine()){
-			String line = in.nextLine();
-			if(line.contains("<pre>") || isCode){
-
-
-
-				if(line.contains("</pre>"))
-					isCode = false;
-				else
-					isCode = true;
-			}
-			
-
+			line = line+in.nextLine();
 		}
 
-		String all = in.split("");	
+		System.out.println(line);
 
-		for(int i = 0; i = in.length(); i++){
+		/*
+		Pattern p = Pattern.compile("<tag>(.+?)</tag>");
+		Matcher m = p.matcher(line);
+		List<String> xss = new ArrayList<String>();
 
-		}
+		while(m.find()){
+		  matches.add(m.group());
+		}*/
+	}
 }
